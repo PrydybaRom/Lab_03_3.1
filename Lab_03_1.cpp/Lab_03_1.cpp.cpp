@@ -8,6 +8,7 @@
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
+#include <windows.h>
 using namespace std;
 int main()
 {
@@ -20,6 +21,7 @@ int main()
 
 
 	A = (x * x) / 2.1 + (sin(fabs(x)));
+
 	// спосіб 1: розгалуження в скороченій формі
 	if (x <= -5)
 		B = 1. / tan(exp(x));
@@ -42,8 +44,10 @@ int main()
 			B = 2 - ((x * x * x) / (fabs(x) + 1));
 		else
 			B = sqrt(fabs(x) - (x * x) / 2);
+
 	y = A + B;
 	cout << "2) y = " << y << endl;
+
 	cin.get();
 	return 0;
 }
